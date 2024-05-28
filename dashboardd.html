@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Asalak Nigeria Limited</title>
+    <link rel="stylesheet" href="dasboard.css">
+    <script src="https://kit.fontawesome.com/e6c17ec117.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="header">
+        Asalak <span class="marquee">Nigeria</span> Asalak
+    </div>
+    
+    <div class="navbar">
+        <div>Company
+            <div class="dropdown">
+                <a href="#">About Us</a>
+                <a href="#">Our Team</a>
+                <a href="#">Our Values</a>
+            </div>
+        </div>
+        <div>Brands
+            <div class="dropdown">
+                <a href="#">Brand 1</a>
+                <a href="#">Brand 2</a>
+                <a href="#">Brand 3</a>
+            </div>
+        </div>
+        <div>Investors
+            <div class="dropdown">
+                <a href="#">Investor Relations</a>
+                <a href="#">Financial Reports</a>
+                <a href="#">Stock Information</a>
+            </div>
+        </div>
+        <div>News
+            <div class="dropdown">
+                <a href="#">Latest News</a>
+                <a href="#">Press Releases</a>
+                <a href="#">Media Contacts</a>
+            </div>
+        </div>
+        <div>Careers
+            <div class="dropdown">
+                <a href="#">Job Openings</a>
+                <a href="#">Internships</a>
+                <a href="#">Career Development</a>
+            </div>
+        </div>
+    </div>
+    <div class="search-section">
+        <input type="text" id="search-input" placeholder="Search...">
+        <button onclick="performSearch()">🔍</button>
+        <div style="margin-right: 20px;">🌐 Network</div>
+        <div style="margin-left: 20px; cursor: pointer;">Contact Us</div>
+    </div>
+    <div class="main-content">
+        <div class="background-section">
+            <h2>Welcome to Asalak Nigeria Limited</h2>
+            <p>Your trusted partner for earth-moving equipment rental, hire, and sales.</p>
+        </div>
+        <div class="about-section">
+            <h2>About Asalak Nigeria Limited</h2>
+            <p>Asalak Nigeria Limited is a leading provider of earth-moving equipment in Nigeria. We offer a wide range of services including rental, hire, and sales of heavy machinery. Our mission is to provide high-quality equipment and services to meet the needs of our diverse client.</p>
+        </div>
+        <div class="work-section">
+            <div class="work-box">
+                <h3>Loadbed Work</h3>
+                <p>We offer two choices: inter-state and within a state.</p>
+                <button>Inter-State</button>
+                <button>Within State</button>
+            </div>
+            <div class="work-box">
+                <h3>Operator Work</h3>
+                <p>We work 8 hours a day to provide the best service.</p>
+                <a href="hire.html?type=hire&work=mechanic"><button>Work Now</button></a>
+            </div>
+            <div class="work-box">
+                <h3>Mechanic Work</h3>
+                <p>We work 6 hours a day. Money for food is 10k, and money for work is 100k.</p>
+                <a href="hire.html?type=hire&work=mechanic"><button>Work Now</button></a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Salmon Saaid" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/YourPage" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/+2348149532849" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/abusalmonsaheed" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Address: NO,15 Ismak Nigeria Limited,Nigeria
+                    Along olodo way, Beside bovas filling station.Ibadan,Oyo state.
+                </p>
+                <br>
+                <br>
+                <p>Email: Abdulhamidsaheed400.com</p>
+                <p>Phone: +2348058437993</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Asalak Nigeria Limited. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        function performSearch() {
+            var query = document.getElementById('search-input').value;
+            if (query) {
+                // Simulate a search result page redirection
+                window.location.href = 'search.html?q=' + encodeURIComponent(query);
+            }
+        }
+    </script>
+</body>
+</html>

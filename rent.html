@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Order Placement - Asalak Nigeria Limited</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin: 15px 0;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            background-color: #FFD700;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color: #FFA500;
+        }
+        .form-group select {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Asalak Nigeria Limited - Order Placement
+    </div>
+    <div class="form-container">
+        <h2>Place an Order</h2>
+        <form id="orderForm">
+            <div class="form-group">
+                <label for="orderType">Order Type:</label>
+                <select id="orderType" name="orderType" required>
+                    <option value="">Select an option</option>
+                    <option value="hire">Hire</option>
+                    <option value="rent">Rent</option>
+                    <option value="buy">Buy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="equipmentType">Equipment Type:</label>
+                <input type="text" id="equipmentType" name="equipmentType" placeholder="Enter the type of equipment" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration (for Hire/Rent):</label>
+                <input type="text" id="duration" name="duration" placeholder="Enter the duration" required>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Order</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Capture form data
+            const orderType = document.getElementById('orderType').value;
+            const equipmentType = document.getElementById('equipmentType').value;
+            const duration = document.getElementById('duration').value;
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            
+            // Display alert with email
+            alert('Order placed successfully! Your email: abdulsalamsaheed658@gmail.com');
+            
+            // Optional: Clear the form
+            document.getElementById('orderForm').reset();
+        });
+    </script>
+</body>
+</html>

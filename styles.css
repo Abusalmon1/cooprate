@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("cat2.jpg");
+  /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 50px;
+  border-radius: 10px;
+  max-width: 80%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.welcome-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFD700;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.options {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.options button {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #FFD700;
+  /* Gold color */
+  color: black;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  /* Allow buttons to be flexible */
+}
+
+.options button:hover {
+  background-color: #FFA500;
+  /* Orange color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+  .welcome-message {
+    font-size: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .question {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  .options button {
+    font-size: 16px;
+    padding: 8px 15px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+  .welcome-message, .description, .question {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  .options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* Stack buttons vertically on very small screens */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .options button {
+    font-size: 14px;
+    padding: 6px 10px;
+    margin: 5px;
+    width: 100%;
+    /* Full width for better alignment */
+  }
+}
+/*# sourceMappingURL=styles.css.map */
