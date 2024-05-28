@@ -19,7 +19,8 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   padding: 50px;
   border-radius: 10px;
-  max-width: 80%;
+  width: 80%;
+  max-width: 800px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -46,11 +47,11 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .options button {
@@ -63,10 +64,10 @@ body {
   background-color: #FFD700;
   /* Gold color */
   color: black;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  /* Allow buttons to be flexible */
+  width: 150px;
+  /* Fixed width for buttons */
+  height: 50px;
+  /* Fixed height for buttons */
 }
 
 .options button:hover {
@@ -75,53 +76,75 @@ body {
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container {
-    padding: 30px;
+    width: 90%;
+    padding: 40px;
   }
   .welcome-message {
-    font-size: 20px;
+    font-size: 22px;
     padding: 15px;
-    margin-bottom: 20px;
   }
-  .question {
+  .description, .question {
     font-size: 18px;
-    margin-top: 15px;
+    margin: 10px 0;
   }
   .options button {
     font-size: 16px;
     padding: 8px 15px;
-    margin: 10px;
+    width: 140px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 30px;
+  }
+  .welcome-message {
+    font-size: 20px;
+  }
+  .description, .question {
+    font-size: 16px;
+  }
+  .options button {
+    font-size: 14px;
+    padding: 6px 10px;
+    width: 130px;
+    height: 40px;
   }
 }
 
 @media (max-width: 480px) {
   .container {
+    width: 100%;
     padding: 20px;
   }
-  .welcome-message, .description, .question {
-    font-size: 16px;
-    margin: 10px 0;
+  .welcome-message {
+    font-size: 18px;
+    padding: 10px;
+  }
+  .description, .question {
+    font-size: 14px;
   }
   .options {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    /* Stack buttons vertically on very small screens */
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .options button {
-    font-size: 14px;
-    padding: 6px 10px;
+    font-size: 12px;
+    padding: 5px;
     margin: 5px;
-    width: 100%;
+    width: 120px;
     /* Full width for better alignment */
+    height: 35px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
